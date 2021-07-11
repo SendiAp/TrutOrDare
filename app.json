@@ -1,0 +1,14 @@
+{
+    "name": "Truth OR Dare ",
+    "description": "Hanya Sekedar Hiburan ",
+    "keywords": [
+        "telegram",
+        "game",
+        "bot"
+    ],
+    "repository": "https://github.com/SendiAp/TrutOrDare",
+    "website": "https://telegram.dog/pikyus1",
+    "success_url": "https://t.me/pikyus1",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Bot Token Kamu"
