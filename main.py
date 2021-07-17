@@ -31,7 +31,7 @@ RED_BLUE_KEYBOARD = InlineKeyboardMarkup([[
 print("=" * 25)
 print("Conversational Games Bot")
 print("=" * 25)
-print("1.0.0 | Release | By Feri", '\n')
+print("1.0.0 | Release | By Sendi", '\n')
 
 ## Functions.
 def parse_list_file(file_path: str) -> list:
@@ -76,7 +76,7 @@ def c_dare(update: Update, ctx: CallbackContext) -> None:
 ## Command Handler.
 print("[Set-Up] Adding handlers..")
 # -- Command Handler -- 
-dispatcher.add_handler(CommandHandler(('goblok'), c_start))
+dispatcher.add_handler(CommandHandler(('start'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
 # -- Callback Query Handler --
