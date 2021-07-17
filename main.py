@@ -31,7 +31,7 @@ RED_BLUE_KEYBOARD = InlineKeyboardMarkup([[
 print("=" * 25)
 print("Conversational Games Bot")
 print("=" * 25)
-print("1.0.0 | Release | By Sendi", '\n')
+print("1.0.0 | Release | By Feri", '\n')
 
 ## Functions.
 def parse_list_file(file_path: str) -> list:
@@ -45,6 +45,8 @@ print("[Loading] Loading responses...")
 database = {
 	"truths": parse_list_file('data/truths.txt'),
 	"dares": parse_list_file('data/dares.txt'),
+	"nhie": parse_list_file('data/nhie.txt'),
+	"tot": parse_list_file('data/tot.txt')
 }
 
 ## Setup.
@@ -57,8 +59,14 @@ def c_start(update: Update, ctx: CallbackContext) -> None:
 	"""General info about the bot and command help."""
 	
 	text = (
-		"Kirim Perintah Digrub,Ini Adalah",
-		"Game Grub,Hanya Bisa Diakses Digrub",
+		"Hai! Saya Bot Game Percakapan\n",
+		">> Daftar Permainan <<",
+		"• Truth or Dare (/truth, /dare)",
+		"• Belum pernah aku (/ever)" ,
+		"• Apakah Anda Lebih Suka (/wyr)",
+		"• Ini Atau Itu (/tot)",
+		"• Maukah Anda Menekan Tombol (/wyp)\n",
+		"Tambahkan saya ke grup dan gunakan perintah untuk bermain dengan teman :)"
 	)
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
 
@@ -196,13 +204,14 @@ def q_buttons(update: Update, ctx: CallbackContext) -> None:
 ## Command Handler.
 print("[Set-Up] Adding handlers..")
 # -- Command Handler -- 
-dispatcher.add_handler(CommandHandler(('start', c_start))
+dispatcher.add_handler(CommandHandler(('goblok'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
+dispatcher.add_handler(CommandHandler(('donasi'), c_tot))
+dispatcher.add_handler(CommandHandler(('help''), c_wyr))
 # -- Callback Query Handler --
 dispatcher.add_handler(CallbackQueryHandler(q_buttons))
 
 ## Polling / Login.
 updater.start_polling()
 print("[Ready] Bot is ready. Started polling.")
-updater.idle()
