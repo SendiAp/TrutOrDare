@@ -86,12 +86,12 @@ def c_help(update: Update, ctx: CallbackContext) -> None:
 	"""General info about the bot and command help."""
 	
 	text = (
-		"**Perintah Untuk Bot TrutOrDare**\n",
+		"✿Perintah Untuk Bot TrutOrDare✿\n",
 		"/dare atau /d : Memberikan Pertanyaan",
 		"/truth atau /t : Ngasih Tantangan",
 		"/donasi : Memberikan Donasi Atau Dukungan",
-		"/help : Bantuan",
-		"Untuk Request TrutOrDare Bisa Klik Bot @RequestTrutDare_Bot",
+		"/help : Bantuan\n",
+		"✿Untuk Request TrutOrDare Bisa Klik Bot @RequestTrutDare_Bot",
 	)
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
 
