@@ -208,7 +208,7 @@ dispatcher.add_handler(CommandHandler(('goblok'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
 dispatcher.add_handler(CommandHandler(('donasi'), c_tot))
-dispatcher.add_handler(CommandHandler(('help''), c_wyr))
+dispatcher.add_handler(CommandHandler(('help'), c_wyr))
 # -- Callback Query Handler --
 dispatcher.add_handler(CallbackQueryHandler(q_buttons))
 
