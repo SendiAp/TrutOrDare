@@ -103,6 +103,7 @@ dispatcher.add_handler(CommandHandler(('start'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
 dispatcher.add_handler(CommandHandler(('donasi'), c_donasi))
+dispatcher.add_handler(CommandHandler(('help'), c_help))
 # -- Callback Query Handler --
 
 ## Polling / Login.
