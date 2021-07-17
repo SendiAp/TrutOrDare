@@ -45,8 +45,6 @@ print("[Loading] Loading responses...")
 database = {
 	"truths": parse_list_file('data/truths.txt'),
 	"dares": parse_list_file('data/dares.txt'),
-	"nhie": parse_list_file('data/nhie.txt'),
-	"tot": parse_list_file('data/tot.txt')
 }
 
 ## Setup.
@@ -198,13 +196,9 @@ def q_buttons(update: Update, ctx: CallbackContext) -> None:
 ## Command Handler.
 print("[Set-Up] Adding handlers..")
 # -- Command Handler -- 
-dispatcher.add_handler(CommandHandler(('start', 'help', 'cmds'), c_start))
+dispatcher.add_handler(CommandHandler(('start', c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
-dispatcher.add_handler(CommandHandler(('neverhaveiever', 'nhie', 'ever', 'never'), c_never))
-dispatcher.add_handler(CommandHandler(('thisorthat', 'tot', 'tt'), c_tot))
-dispatcher.add_handler(CommandHandler(('wyr', 'rather', 'wouldyourather'), c_wyr))
-dispatcher.add_handler(CommandHandler(('wyptb', 'button', 'wouldyoupressthebutton', 'wyp'), c_wyptb))
 # -- Callback Query Handler --
 dispatcher.add_handler(CallbackQueryHandler(q_buttons))
 
