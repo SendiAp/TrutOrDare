@@ -73,12 +73,22 @@ def c_dare(update: Update, ctx: CallbackContext) -> None:
 	response = f"*Dare:* {escape_markdown(choice(database['dares']), 2)}" 
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = response, parse_mode=ParseMode.MARKDOWN_V2)
 
+def c_donasi(update: Update, ctx: CallbackContext) -> None:
+	"""General info about the bot and command help."""
+	
+	text = (
+		"Jika Kamu Mau Berdonasi Silakan Hubungi @pikyus1",
+	)
+	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
+
+
 ## Command Handler.
 print("[Set-Up] Adding handlers..")
 # -- Command Handler -- 
 dispatcher.add_handler(CommandHandler(('start'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
+dispatcher.add_handler(CommandHandler(('donasi'), c_donasi))
 # -- Callback Query Handler --
 
 ## Polling / Login.
