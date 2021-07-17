@@ -59,8 +59,8 @@ def c_start(update: Update, ctx: CallbackContext) -> None:
 	"""General info about the bot and command help."""
 	
 	text = (
-		"Kirim Perintah Digrub Ini Adalah\n",
-		"Game Grub, Hanya Bisa Diakses Digrub",
+		"Kirim Perintah Digrub,Ini Adalah",
+		"Game Grub,Hanya Bisa Diakses Digrub",
 	)
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
 
