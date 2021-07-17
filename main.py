@@ -80,7 +80,6 @@ dispatcher.add_handler(CommandHandler(('goblok'), c_start))
 dispatcher.add_handler(CommandHandler(('t', 'truth'), c_truth))
 dispatcher.add_handler(CommandHandler(('d', 'dare'), c_dare))
 # -- Callback Query Handler --
-dispatcher.add_handler(CallbackQueryHandler(q_buttons))
 
 ## Polling / Login.
 updater.start_polling()
