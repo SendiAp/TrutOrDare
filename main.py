@@ -57,7 +57,7 @@ def c_start(update: Update, ctx: CallbackContext) -> None:
 	"""General info about the bot and command help."""
 	
 	text = (
-		"Kirim Perintah Digrub 🌹",
+		"Ini adalah bot TrutOrDare khusus untuk grup, kirim command di grup.",
 	)
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
 
