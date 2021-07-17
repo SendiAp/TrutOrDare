@@ -31,7 +31,7 @@ RED_BLUE_KEYBOARD = InlineKeyboardMarkup([[
 print("=" * 25)
 print("Conversational Games Bot")
 print("=" * 25)
-print("1.0.0 | Release | By Feri", '\n')
+print("1.0.0 | Release | By Sendi", '\n')
 
 ## Functions.
 def parse_list_file(file_path: str) -> list:
@@ -59,14 +59,8 @@ def c_start(update: Update, ctx: CallbackContext) -> None:
 	"""General info about the bot and command help."""
 	
 	text = (
-		"Hai! Saya Bot Game Percakapan\n",
-		">> Daftar Permainan <<",
-		"• Truth or Dare (/truth, /dare)",
-		"• Belum pernah aku (/ever)" ,
-		"• Apakah Anda Lebih Suka (/wyr)",
-		"• Ini Atau Itu (/tot)",
-		"• Maukah Anda Menekan Tombol (/wyp)\n",
-		"Tambahkan saya ke grup dan gunakan perintah untuk bermain dengan teman :)"
+		"Kirim Perintah Digrub Ini Adalah\n",
+		"Game Grub, Hanya Bisa Diakses Digrub",
 	)
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = '\n'.join(text))
 
