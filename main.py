@@ -66,8 +66,7 @@ def c_truth(update: Update, ctx: CallbackContext) -> None:
 	
 	response = f"*Truth:* {escape_markdown(choice(database['truths']), 2)}"
 	ctx.bot.send_message(chat_id = update.effective_chat.id, text = response, parse_mode=ParseMode.MARKDOWN_V2)
-        reply_to_message_id=message.message_id) 
-
+        
 def c_dare(update: Update, ctx: CallbackContext) -> None:
 	"""Get a dare."""
 	
